@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</h1>
+
+<p>
+  <strong>Address:</strong>
+  <em><%= @restaurant.address %></em>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <em><%= @restaurant.category %></em>
+</p>
+<p>
+  <strong>Phone number:</strong>
+  <%= @restaurant.phone_number %>
+</p>
+
+<%= link_to 'Back', restaurants_path, class: "btn btn-primary" %>
+<%= render 'reviews/new' %>
+
+<%= link_to "Back to Restaurant page", restaurant_path(@restaurant), class: "btn btn-primary"%>
+
+<h2>Reviews</h2>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+  <li>
+    <%= review.content %> -
+    <%= review.rating %>
+  </li>
+  <% end %>
+</ul>
+
+
+

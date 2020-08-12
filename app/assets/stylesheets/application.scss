@@ -13,3 +13,19 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.nav-bar {
+  background-color: lightblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.page-content {
+  margin-top: 80px;
+  padding-left: 20px;
+}
